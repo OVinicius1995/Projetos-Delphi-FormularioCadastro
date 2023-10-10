@@ -9,11 +9,11 @@ uses
 
 type
   TfrmPrincipal = class(TForm)
-    ADOConnection1: TADOConnection;
-    ADOTable1: TADOTable;
+    adcConexao: TADOConnection;
+    adtConexao: TADOTable;
     DBGrid1: TDBGrid;
-    DataSource1: TDataSource;
-    DBNavigator1: TDBNavigator;
+    dtsConexao: TDataSource;
+    dbnNav: TDBNavigator;
     stbDataHora: TStatusBar;
     tmDataHora: TTimer;
     procedure tmDataHoraTimer(Sender: TObject);

@@ -17,6 +17,7 @@ object frmPrincipal: TfrmPrincipal
     Top = 197
     Width = 612
     Height = 212
+    DataSource = dtsConexao
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -24,11 +25,12 @@ object frmPrincipal: TfrmPrincipal
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
   end
-  object DBNavigator1: TDBNavigator
+  object dbnNav: TDBNavigator
     Left = 8
     Top = 409
     Width = 610
     Height = 25
+    DataSource = dtsConexao
     TabOrder = 1
   end
   object stbDataHora: TStatusBar
@@ -54,15 +56,28 @@ object frmPrincipal: TfrmPrincipal
     ExplicitTop = 232
     ExplicitWidth = 0
   end
-  object ADOConnection1: TADOConnection
+  object adcConexao: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\ViniciusA' +
+      'breudeOlive\Desktop\Projetos-Delphi\Projetos-Delphi-FormularioCa' +
+      'dastro\BD\Clientes.accdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.ACE.OLEDB.16.0'
     Left = 88
     Top = 200
   end
-  object ADOTable1: TADOTable
+  object adtConexao: TADOTable
+    Active = True
+    Connection = adcConexao
+    CursorType = ctStatic
+    TableName = 'Clientes'
     Left = 177
     Top = 200
   end
-  object DataSource1: TDataSource
+  object dtsConexao: TDataSource
+    DataSet = adtConexao
     Left = 251
     Top = 200
   end
