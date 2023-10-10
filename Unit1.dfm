@@ -10,13 +10,15 @@ object frmPrincipal: TfrmPrincipal
   Font.Height = -12
   Font.Name = 'Segoe UI'
   Font.Style = []
+  Menu = mmuMenus
   Position = poOwnerFormCenter
   TextHeight = 15
   object DBGrid1: TDBGrid
     Left = 8
-    Top = 197
+    Top = 173
     Width = 612
     Height = 212
+    DataSource = dtsConexao
     TabOrder = 0
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -24,19 +26,19 @@ object frmPrincipal: TfrmPrincipal
     TitleFont.Name = 'Segoe UI'
     TitleFont.Style = []
   end
-  object DBNavigator1: TDBNavigator
+  object dbnNav: TDBNavigator
     Left = 8
-    Top = 409
+    Top = 392
     Width = 610
     Height = 25
+    DataSource = dtsConexao
     TabOrder = 1
   end
   object stbDataHora: TStatusBar
     Left = 0
-    Top = 0
+    Top = 423
     Width = 628
     Height = 19
-    Align = alTop
     Enabled = False
     Panels = <
       item
@@ -54,20 +56,55 @@ object frmPrincipal: TfrmPrincipal
     ExplicitTop = 232
     ExplicitWidth = 0
   end
-  object ADOConnection1: TADOConnection
+  object adcConexao: TADOConnection
+    Connected = True
+    ConnectionString = 
+      'Provider=Microsoft.ACE.OLEDB.16.0;Data Source=C:\Users\ViniciusA' +
+      'breudeOlive\Desktop\Projetos-Delphi\Projetos-Delphi-FormularioCa' +
+      'dastro\BD\Clientes.accdb;Persist Security Info=False'
+    LoginPrompt = False
+    Mode = cmShareDenyNone
+    Provider = 'Microsoft.ACE.OLEDB.16.0'
     Left = 88
     Top = 200
   end
-  object ADOTable1: TADOTable
+  object adtConexao: TADOTable
+    Active = True
+    Connection = adcConexao
+    CursorType = ctStatic
+    TableName = 'Clientes'
     Left = 177
     Top = 200
   end
-  object DataSource1: TDataSource
+  object dtsConexao: TDataSource
+    DataSet = adtConexao
     Left = 251
     Top = 200
   end
   object tmDataHora: TTimer
     OnTimer = tmDataHoraTimer
-    Left = 584
+    Left = 480
+    Top = 416
+  end
+  object mmuMenus: TMainMenu
+    Left = 144
+    Top = 40
+    object c1: TMenuItem
+      Caption = 'Cadastro'
+      object mmuClientes: TMenuItem
+        Caption = 'Clientes'
+      end
+      object Sair1: TMenuItem
+        Caption = '-'
+        Enabled = False
+      end
+      object mmuSair: TMenuItem
+        Caption = 'Sair'
+        OnClick = mmuSairClick
+      end
+    end
+    object Re1: TMenuItem
+      Caption = 'Relat'#243'rio'
+    end
   end
 end
