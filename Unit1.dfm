@@ -222,6 +222,10 @@ object frmPrincipal: TfrmPrincipal
         Caption = '-'
         Enabled = False
       end
+      object mmuPlayer: TMenuItem
+        Caption = 'Player'
+        OnClick = mmuPlayerClick
+      end
     end
   end
 end
