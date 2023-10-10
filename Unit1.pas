@@ -22,8 +22,11 @@ type
     Sair1: TMenuItem;
     Re1: TMenuItem;
     mmuSair: TMenuItem;
+    mmuDespertador: TMenuItem;
+    mmuSeparador: TMenuItem;
     procedure tmDataHoraTimer(Sender: TObject);
     procedure mmuSairClick(Sender: TObject);
+    procedure mmuDespertadorClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -38,12 +41,19 @@ implementation
 
 {$R *.dfm}
 
+uses Unit2;
+
 
 procedure TfrmPrincipal.tmDataHoraTimer(Sender: TObject);
 begin
     stbDataHora.Panels[0].Text := '' + FormatDateTime('dddd", "de" "mmmm" de "yyyy',now);
     stbDataHora.Panels[1].Text := 'Bem Vindo';
     stbDataHora.Panels[2].Text := '' + FormatDateTime('hh:nn:mm',now);
+end;
+
+procedure TfrmPrincipal.mmuDespertadorClick(Sender: TObject);
+begin
+    frmDespertador.ShowModal();
 end;
 
 procedure TfrmPrincipal.mmuSairClick(Sender: TObject);
