@@ -214,6 +214,14 @@ object frmPrincipal: TfrmPrincipal
     end
     object Re1: TMenuItem
       Caption = 'Utilit'#225'rios'
+      object mmuDespertador: TMenuItem
+        Caption = 'Despertador'
+        OnClick = mmuDespertadorClick
+      end
+      object mmuSeparador: TMenuItem
+        Caption = '-'
+        Enabled = False
+      end
     end
   end
 end
