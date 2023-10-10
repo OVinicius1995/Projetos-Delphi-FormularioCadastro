@@ -91,16 +91,14 @@ object frmPrincipal: TfrmPrincipal
     Top = 40
     object c1: TMenuItem
       Caption = 'Cadastro'
-      object mmuClientes: TMenuItem
+      object Ca1: TMenuItem
         Caption = 'Clientes'
       end
       object Sair1: TMenuItem
-        Caption = '-'
-        Enabled = False
+        Caption = '_'
       end
-      object mmuSair: TMenuItem
+      object Sair2: TMenuItem
         Caption = 'Sair'
-        OnClick = mmuSairClick
       end
     end
     object Re1: TMenuItem

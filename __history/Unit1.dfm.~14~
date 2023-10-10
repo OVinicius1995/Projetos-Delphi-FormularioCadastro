@@ -100,7 +100,6 @@ object frmPrincipal: TfrmPrincipal
       end
       object mmuSair: TMenuItem
         Caption = 'Sair'
-        OnClick = mmuSairClick
       end
     end
     object Re1: TMenuItem

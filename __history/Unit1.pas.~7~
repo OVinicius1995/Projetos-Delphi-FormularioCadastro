@@ -18,13 +18,12 @@ type
     tmDataHora: TTimer;
     mmuMenus: TMainMenu;
     c1: TMenuItem;
-    mmuClientes: TMenuItem;
+    Ca1: TMenuItem;
     Sair1: TMenuItem;
     Re1: TMenuItem;
-    mmuSair: TMenuItem;
+    Sair2: TMenuItem;
     procedure tmDataHoraTimer(Sender: TObject);
-    procedure mmuSairClick(Sender: TObject);
-
+    procedure c1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -38,17 +37,16 @@ implementation
 
 {$R *.dfm}
 
+procedure TfrmPrincipal.c1Click(Sender: TObject);
+begin
+Caa
+end;
 
 procedure TfrmPrincipal.tmDataHoraTimer(Sender: TObject);
 begin
     stbDataHora.Panels[0].Text := '' + FormatDateTime('dddd", "de" "mmmm" de "yyyy',now);
     stbDataHora.Panels[1].Text := 'Bem Vindo';
     stbDataHora.Panels[2].Text := '' + FormatDateTime('hh:nn:mm',now);
-end;
-
-procedure TfrmPrincipal.mmuSairClick(Sender: TObject);
-begin
-    close;
 end;
 
 end.
