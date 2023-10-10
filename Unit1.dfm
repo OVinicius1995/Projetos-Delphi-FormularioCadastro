@@ -52,9 +52,8 @@ object frmPrincipal: TfrmPrincipal
         Alignment = taRightJustify
         Width = 50
       end>
-    ExplicitLeft = 320
-    ExplicitTop = 232
-    ExplicitWidth = 0
+    ExplicitTop = 422
+    ExplicitWidth = 624
   end
   object adcConexao: TADOConnection
     Connected = True
@@ -104,7 +103,7 @@ object frmPrincipal: TfrmPrincipal
       end
     end
     object Re1: TMenuItem
-      Caption = 'Relat'#243'rio'
+      Caption = 'Utilit'#225'rios'
     end
   end
 end
