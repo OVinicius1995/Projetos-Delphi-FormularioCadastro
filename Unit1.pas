@@ -33,7 +33,8 @@ implementation
 procedure TfrmPrincipal.tmDataHoraTimer(Sender: TObject);
 begin
     stbDataHora.Panels[0].Text := '' + FormatDateTime('dddd", "de" "mmmm" de "yyyy',now);
-    stbDataHora.Panels[1].Text := '' + FormatDateTime('hh:nn:mm',now);
+    stbDataHora.Panels[1].Text := 'Bem Vindo';
+    stbDataHora.Panels[2].Text := '' + FormatDateTime('hh:nn:mm',now);
 end;
 
 end.

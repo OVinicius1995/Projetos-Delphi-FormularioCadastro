@@ -40,9 +40,14 @@ object frmPrincipal: TfrmPrincipal
     Enabled = False
     Panels = <
       item
-        Width = 50
+        Width = 210
       end
       item
+        Alignment = taCenter
+        Width = 300
+      end
+      item
+        Alignment = taRightJustify
         Width = 50
       end>
     ExplicitLeft = 320
