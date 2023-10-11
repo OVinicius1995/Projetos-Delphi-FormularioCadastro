@@ -3,21 +3,9 @@ object frmPlayer: TfrmPlayer
   Top = 0
   BorderStyle = bsSizeToolWin
   Caption = 'Player'
-  ClientHeight = 701
+  ClientHeight = 440
   ClientWidth = 624
   Color = clBtnFace
-  CustomTitleBar.BackgroundColor = clWhite
-  CustomTitleBar.ForegroundColor = 65793
-  CustomTitleBar.InactiveBackgroundColor = clWhite
-  CustomTitleBar.InactiveForegroundColor = 10066329
-  CustomTitleBar.ButtonForegroundColor = 65793
-  CustomTitleBar.ButtonBackgroundColor = clWhite
-  CustomTitleBar.ButtonHoverForegroundColor = 65793
-  CustomTitleBar.ButtonHoverBackgroundColor = 16053492
-  CustomTitleBar.ButtonPressedForegroundColor = 65793
-  CustomTitleBar.ButtonPressedBackgroundColor = 15395562
-  CustomTitleBar.ButtonInactiveForegroundColor = 10066329
-  CustomTitleBar.ButtonInactiveBackgroundColor = clWhite
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -88,54 +76,51 @@ object frmPlayer: TfrmPlayer
   StyleElements = [seFont, seClient]
   TextHeight = 15
   object imgImagem: TImage
-    Left = 8
-    Top = 279
-    Width = 600
-    Height = 129
+    Left = 0
+    Top = 0
+    Width = 624
+    Height = 440
+    Align = alClient
+    IncrementalDisplay = True
     Stretch = True
+    ExplicitTop = 1
   end
-  object Panel1: TPanel
-    Left = 8
-    Top = 8
-    Width = 608
-    Height = 265
-    Caption = 'Panel1'
-    ParentBackground = False
+  object MediaPlayer1: TMediaPlayer
+    Left = 90
+    Top = 406
+    Width = 523
+    Height = 30
+    DoubleBuffered = True
+    StyleName = 'Windows'
+    ParentDoubleBuffered = False
     TabOrder = 0
-    object MediaPlayer1: TMediaPlayer
-      Left = 105
-      Top = 121
-      Width = 478
-      Height = 30
-      DoubleBuffered = True
-      ParentDoubleBuffered = False
-      TabOrder = 0
-    end
-    object Button1: TButton
-      Left = 24
-      Top = 121
-      Width = 75
-      Height = 30
-      Caption = 'Button1'
-      TabOrder = 1
-    end
-    object btnPreferencias: TButton
-      Left = 0
-      Top = 0
-      Width = 129
-      Height = 30
-      Caption = 'Imagem de fundo'
-      TabOrder = 2
-      OnClick = btnPreferenciasClick
-    end
+  end
+  object btnAbrir: TButton
+    Left = 9
+    Top = 406
+    Width = 75
+    Height = 30
+    Caption = 'Abrir'
+    TabOrder = 1
+    OnClick = btnAbrirClick
+  end
+  object btnPreferencias: TButton
+    Left = 0
+    Top = 0
+    Width = 129
+    Height = 30
+    Caption = 'Imagem de fundo'
+    TabOrder = 2
+    OnClick = btnPreferenciasClick
   end
   object opdMedia: TOpenDialog
+    Filter = 'AVI|*.avi|MP3|*.mp3'
     Left = 296
-    Top = 192
+    Top = 224
   end
   object opdImagemFundo: TOpenPictureDialog
-    Filter = '*.jpg,*.jpeg,*.bmp,*.png'
-    Left = 400
-    Top = 192
+    Filter = 'PNG|*.png'
+    Left = 392
+    Top = 216
   end
 end

@@ -90,6 +90,7 @@ object frmPlayer: TfrmPlayer
     Top = 406
     Width = 523
     Height = 30
+    EnabledButtons = [btPlay, btPause, btStop, btNext, btPrev, btStep, btBack]
     DoubleBuffered = True
     StyleName = 'Windows'
     ParentDoubleBuffered = False
