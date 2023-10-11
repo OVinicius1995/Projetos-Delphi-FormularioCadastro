@@ -1,0 +1,26 @@
+unit Unit3;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.MPlayer, Vcl.ExtCtrls;
+
+type
+  TfrmPlayer = class(TForm)
+    Panel1: TPanel;
+    MediaPlayer1: TMediaPlayer;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmPlayer: TfrmPlayer;
+
+implementation
+
+{$R *.dfm}
+
+end.

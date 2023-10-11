@@ -24,9 +24,11 @@ type
     mmuSair: TMenuItem;
     mmuDespertador: TMenuItem;
     mmuSeparador: TMenuItem;
+    mmuPlayer: TMenuItem;
     procedure tmDataHoraTimer(Sender: TObject);
     procedure mmuSairClick(Sender: TObject);
     procedure mmuDespertadorClick(Sender: TObject);
+    procedure mmuPlayerClick(Sender: TObject);
 
   private
     { Private declarations }
@@ -41,7 +43,8 @@ implementation
 
 {$R *.dfm}
 
-uses Unit2;
+uses Unit2,Unit3;
+
 
 
 procedure TfrmPrincipal.tmDataHoraTimer(Sender: TObject);
@@ -54,6 +57,11 @@ end;
 procedure TfrmPrincipal.mmuDespertadorClick(Sender: TObject);
 begin
     frmDespertador.ShowModal();
+end;
+
+procedure TfrmPrincipal.mmuPlayerClick(Sender: TObject);
+begin
+      frmPlayer.Show();
 end;
 
 procedure TfrmPrincipal.mmuSairClick(Sender: TObject);
