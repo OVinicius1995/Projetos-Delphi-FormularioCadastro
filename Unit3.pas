@@ -50,9 +50,8 @@ begin
 
       opdImagemFundo.Execute();
 
-      ShowMessage(opdImagemFundo.FileName);
-
       imgImagem.Picture.LoadFromFile(opdImagemFundo.FileName);
+
 end;
 
 end.
