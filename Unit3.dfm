@@ -83,14 +83,11 @@ object frmPlayer: TfrmPlayer
     Align = alClient
     IncrementalDisplay = True
     Stretch = True
-    ExplicitLeft = 8
-    ExplicitTop = 286
-    ExplicitWidth = 600
-    ExplicitHeight = 129
+    ExplicitTop = 1
   end
   object MediaPlayer1: TMediaPlayer
-    Left = 89
-    Top = 113
+    Left = 90
+    Top = 406
     Width = 523
     Height = 30
     DoubleBuffered = True
@@ -99,8 +96,8 @@ object frmPlayer: TfrmPlayer
     TabOrder = 0
   end
   object btnAbrir: TButton
-    Left = 8
-    Top = 113
+    Left = 9
+    Top = 406
     Width = 75
     Height = 30
     Caption = 'Abrir'
