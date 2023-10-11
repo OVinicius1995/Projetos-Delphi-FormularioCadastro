@@ -13,9 +13,10 @@ type
     opdImagemFundo: TOpenPictureDialog;
     imgImagem: TImage;
     MediaPlayer1: TMediaPlayer;
-    Button1: TButton;
+    btnAbrir: TButton;
     btnPreferencias: TButton;
     procedure btnPreferenciasClick(Sender: TObject);
+    procedure btnAbrirClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -28,6 +29,21 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TfrmPlayer.btnAbrirClick(Sender: TObject);
+begin
+    MediaPlayer1.Close;
+
+    if opdMedia.Execute() then
+
+    begin
+
+        MediaPlayer1.FileName := opdMedia.FileName;
+        MediaPlayer1.Open;
+
+    end;
+
+end;
 
 procedure TfrmPlayer.btnPreferenciasClick(Sender: TObject);
 begin

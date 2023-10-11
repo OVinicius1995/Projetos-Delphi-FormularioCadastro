@@ -6,18 +6,6 @@ object frmPlayer: TfrmPlayer
   ClientHeight = 440
   ClientWidth = 624
   Color = clBtnFace
-  CustomTitleBar.BackgroundColor = clWhite
-  CustomTitleBar.ForegroundColor = 65793
-  CustomTitleBar.InactiveBackgroundColor = clWhite
-  CustomTitleBar.InactiveForegroundColor = 10066329
-  CustomTitleBar.ButtonForegroundColor = 65793
-  CustomTitleBar.ButtonBackgroundColor = clWhite
-  CustomTitleBar.ButtonHoverForegroundColor = 65793
-  CustomTitleBar.ButtonHoverBackgroundColor = 16053492
-  CustomTitleBar.ButtonPressedForegroundColor = 65793
-  CustomTitleBar.ButtonPressedBackgroundColor = 15395562
-  CustomTitleBar.ButtonInactiveForegroundColor = 10066329
-  CustomTitleBar.ButtonInactiveBackgroundColor = clWhite
   DefaultMonitor = dmDesktop
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -106,16 +94,18 @@ object frmPlayer: TfrmPlayer
     Width = 523
     Height = 30
     DoubleBuffered = True
+    StyleName = 'Windows'
     ParentDoubleBuffered = False
     TabOrder = 0
   end
-  object Button1: TButton
+  object btnAbrir: TButton
     Left = 8
     Top = 113
     Width = 75
     Height = 30
-    Caption = 'Button1'
+    Caption = 'Abrir'
     TabOrder = 1
+    OnClick = btnAbrirClick
   end
   object btnPreferencias: TButton
     Left = 0
@@ -127,11 +117,12 @@ object frmPlayer: TfrmPlayer
     OnClick = btnPreferenciasClick
   end
   object opdMedia: TOpenDialog
+    Filter = 'AVI|*.avi|MP3|*.mp3'
     Left = 296
     Top = 224
   end
   object opdImagemFundo: TOpenPictureDialog
-    Filter = '*.jpg,*.jpeg,*.bmp,*.png'
+    Filter = 'PNG|*.png'
     Left = 392
     Top = 216
   end
